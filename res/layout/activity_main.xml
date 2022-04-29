@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <FrameLayout
+        android:layout_height = "match_parent"
+        android:layout_width = "match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation = "vertical"
+                tools:context=".MainActivity">
+                <!--There must be an image here-->
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "500px"
+                    android:gravity = "center"
+                    android:layout_marginTop = "32dp">
+                    <RelativeLayout
+                        android:layout_width = "500px"
+                        android:layout_height = "match_parent"
+                        >
+                        <ImageView
+                            android:id = "@+id/android_head"
+                            android:layout_width = "match_parent"
+                            android:layout_height = "match_parent"
+                            android:src = "@drawable/ic_launcher_background"
+                            >
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src = "@drawable/ic_launcher_foreground">
+                        </ImageView>
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--Hello World bold text here-->
+                <TextView
+                    android:id="@+id/text_view_no1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop = "8dp"
+                    android:text="Hello World"
+                    android:textSize = "36sp"
+                    android:gravity = "center"
+                    android:textStyle = "bold"
+                    />
+                <TextView
+                    android:id = "@+id/Description"
+                    android:layout_marginTop = "100px"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "500px"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna."
+                    android:textSize = "65px"
+                    android:gravity = "center"
+                    />
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "250px"
+                    android:orientation = "horizontal"
+                    android:gravity = "center"
+                    android:layout_marginTop = "16dp">
+
+                    <Button
+                        android:id="@+id/button_no1"
+                        android:layout_width="0dp"
+                        android:layout_height="150px"
+                        android:gravity="center"
+                        android:text="unfollow"
+                        android:textSize="35px"
+                        android:layout_weight = "1"/>
+
+                    <Button
+                        android:id = "@+id/button_no2"
+                        android:layout_width = "0dp"
+                        android:layout_height = "150px"
+                        android:gravity = "center"
+                        android:layout_weight = "1"
+                        android:text = "Message"
+                        android:textSize = "40px"
+                        android:layout_marginLeft = "250px"
+                        />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/FrameLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+        </RelativeLayout>
+        <!--Confirmation follow message-->
+        <FrameLayout
+            android:id = "@+id/FrameLayout1"
+            android:layout_height = "match_parent"
+            android:layout_width = "match_parent"
+            android:visibility = "gone">
+            <RelativeLayout
+                android:id = "@+id/backing"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent">
+                <TextView
+                    android:id = "@+id/Base"
+                    android:layout_width = "409dp"
+                    android:layout_height = "match_parent"
+                    android:background = "@color/whiteTranslucent">
+                </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id = "@+id/mainOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background = "@color/purple_200">
+                <LinearLayout
+                    android:layout_height = "match_parent"
+                    android:layout_width = "match_parent"
+                    android:orientation = "vertical"
+                    android:gravity = "center">
+                    <TextView
+                        android:id="@+id/overlay_textView_no1"
+                        android:layout_width="409dp"
+                        android:layout_height="200px"
+                        android:text="Followed Successfully"
+                        android:textSize = "80px"
+                        android:gravity = "center"
+                        android:textStyle = "bold"
+                        />
+                    <Button
+                        android:id = "@+id/confirmationFollowButton"
+                        android:layout_width="300px"
+                        android:layout_height="150px"
+                        android:text = "OK"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+        <!--Confirmation unfollow message-->
+        <FrameLayout
+            android:id = "@+id/FrameLayout2"
+            android:layout_width = "match_parent"
+            android:layout_height="match_parent"
+            android:visibility = "gone">
+            <RelativeLayout
+                android:id = "@+id/backingUnfollow"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:visibility = "visible">
+                <TextView
+                    android:id = "@+id/BaseUnfollow"
+                    android:layout_width = "409dp"
+                    android:layout_height = "match_parent"
+                    android:background = "@color/whiteTranslucent">
+                </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id = "@+id/mainOverlayUnfollow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background = "@color/purple_200">
+                <LinearLayout
+                    android:layout_height = "match_parent"
+                    android:layout_width = "match_parent"
+                    android:orientation = "vertical"
+                    android:gravity = "center">
+                    <TextView
+                        android:id="@+id/overlay_textView_no2"
+                        android:layout_width="409dp"
+                        android:layout_height="200px"
+                        android:text="Unfollowed Successfully"
+                        android:textSize = "80px"
+                        android:gravity = "center"
+                        android:textStyle = "bold"
+                        />
+                    <Button
+                        android:id = "@+id/confirmationUnfollowButton"
+                        android:layout_width="300px"
+                        android:layout_height="150px"
+                        android:text = "OK"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+        <!--Message log-->
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
