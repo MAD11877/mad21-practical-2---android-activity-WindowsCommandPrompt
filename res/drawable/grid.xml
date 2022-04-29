@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height = "500px"
+    android:width = "500px"
+    android:viewportHeight = "500"
+    android:viewportWidth ="500">
+    <!--Starting at (0, 240)-->
+    <!---->
+    <path
+        android:name = "firstStroke"
+        android:fillColor = "#FFDD0E00"
+        android:pathData = "M0, 240 L15, 220 L15, 450 L0, 250"/>
+    <!--Starting coordinates set to ( )-->
+</vector>
